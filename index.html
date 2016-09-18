@@ -681,6 +681,15 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <div class="paragraph">
 <p>Neste algoritmo, mais uma vez lemos a imagem e pegamos seu tamanho (largura e altura), com estas informações mapeamos toda imagem e a dividimos em 4 matrizes (pegamos metade da altura e metade da largura para essa divisão). Depois criamos uma nova matriz e com a ajuda de um auxiliar (aux) colocamos as 4 partes em seus devidos locais a <strong>Primeira</strong> trocamos com a <strong>Quarta</strong> matriz, e a <strong>Segunda</strong> com a <strong>Terceira</strong> matriz.</p>
 </div>
+<div class="paragraph">
+<p>Segue Resultado:</p>
+</div>
+<div id="img-troca" class="imageblock">
+<div class="content">
+<img src="troca.png" alt="troca">
+</div>
+<div class="title">Figure 2. Troca</div>
+</div>
 </div>
 </div>
 <div class="sect2">
@@ -788,6 +797,12 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <div class="paragraph">
 <p>Neste código ao adquirirmos a imagem identificamos objetos que toquem a borda e o retiramos com um <strong>floodfill</strong>, após isso mudamos a cor do plano de fundo para que o fundo seja diferenciado da bolha do objeto. Com isso percorremos toda a imagem procurando os objetos que são sólidos.</p>
 </div>
+<div id="img-sosolidos" class="imageblock">
+<div class="content">
+<img src="sosolidos.png" alt="sosolidos">
+</div>
+<div class="title">Figure 3. Só Solidos</div>
+</div>
 </div>
 </div>
 <div class="sect2">
@@ -885,7 +900,13 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </div>
 </div>
 <div class="paragraph">
-<p>Neste código foi utilizado uma função do opencv para fazer o calculo do histograma. O intuido deste calculo é para a distribuição dos pixels fique uniforme, desta maneira temos uma melhor distribuição de brilo na imagem. Este processo é fácil ser notado em uma imagem em <em>Grayscale</em>, porém para imagens coloridas não temos a mesma facilidade até porque não é correto aplicar uma equalização num RGB, desta maneira convertemos a imagem colorida para YCrCb para que possamos separar a cor da intensidade luminosa da imagem.</p>
+<p>Neste código foi utilizado uma função do opencv para fazer o calculo do histograma. O intuido deste calculo é para a distribuição dos pixels fique uniforme, desta maneira temos uma melhor distribuição de brilo na imagem. Este processo é fácil ser notado em uma imagem em <em>Grayscale</em>, porém para imagens coloridas não temos a mesma facilidade até porque não é correto aplicar uma equalização num RGB, desta maneira convertemos a imagem colorida para YCrCb para que possamos separar a cor da intensidade luminosa da imagem como é possivel observar nas imagens abaixo:</p>
+</div>
+<div id="img-ImgEQ" class="imageblock">
+<div class="content">
+<img src="ImgEQ.png" alt="ImgEQ">
+</div>
+<div class="title">Figure 4. Imagem Equalizada</div>
 </div>
 </div>
 <div class="sect3">
@@ -976,7 +997,13 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <p>Para este algoritmo teriamos um calculo continuo de histogramas, um limite para variações, e um alerta a ser emitido.</p>
 </div>
 <div class="paragraph">
-<p>Com base na camera disponivel calculamos um limite para que nao haja alertas desnecessários, porém ainda assim possamos identificar quando essa variação venha ocorrer. Uma vez que possuimos esse valor de limite o utilizamos para que todas as vezes que o histograma tenha uma variação que seja maior que este limite emita - se um alerta (para meu caso uma bola vermelha junto com a indicação de "MEXEU").</p>
+<p>Com base na camera disponivel calculamos um limite para que nao haja alertas desnecessários, porém ainda assim possamos identificar quando essa variação venha ocorrer. Uma vez que possuimos esse valor de limite o utilizamos para que todas as vezes que o histograma tenha uma variação que seja maior que este limite emita - se um alerta (para meu caso uma bola vermelha junto com a indicação de "MEXEU"). Observe abaixo:</p>
+</div>
+<div id="img-motiondetector" class="imageblock">
+<div class="content">
+<img src="motiondetector.png" alt="motiondetector">
+</div>
+<div class="title">Figure 5. Motion Detector</div>
 </div>
 </div>
 </div>
@@ -1128,15 +1155,23 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <div class="paragraph">
 <p>O que observamos neste algoritmo é que ele melhora a identificação de bordas da imagem, pois com o gaussiano diminuimos um pouco o ruido da imagem e assim facilitamos a identificação das bordas pelo laplaciano.</p>
 </div>
-<div class="imageblock">
+<div class="paragraph">
+<p>Aqui está a imagem do laplaciano:</p>
+</div>
+<div id="img-laplaciano" class="imageblock">
 <div class="content">
 <img src="laplaciano.png" alt="laplaciano">
 </div>
+<div class="title">Figure 6. Laplaciano</div>
 </div>
-<div class="imageblock">
+<div class="paragraph">
+<p>Agora observemos o laplaciano do gaussiano:</p>
+</div>
+<div id="img-lapgauss" class="imageblock">
 <div class="content">
 <img src="lapgauss.png" alt="lapgauss">
 </div>
+<div class="title">Figure 7. Laplaciano do Gaussiano</div>
 </div>
 </div>
 </div>
@@ -1148,7 +1183,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <p>Neste exercicio o professor pediu para que produzissemos um filtro <em>TiltShift</em> com regulação de altura da região, força do decaimento e ajuste para regular a posição vertical da imagem.</p>
 </div>
 <div class="paragraph">
-<p>Temos primeiro a criação de sliders como o professor exigiu uma vez criados e identificados selecionamos uma imagem para trabalhar e criamos uma mascara para borramento da imagem, com isso criado vamos ter duas imagens uma onde vemos em uma o borramento e em outra a imagem na de borramentos deixamos as bordas com maior ocorrência e o meio com menor(borda = 1 meio = 0) e nada imagem o contrário bordas com menor ocorrencia e meio com maior (bordas = 0, meio = 1) e logo após isso somamos os dois resultados e temos o filtro tilt shift. O código é apresentado abaixo</p>
+<p>Temos primeiro a criação de sliders como o professor exigiu uma vez criados e identificados selecionamos uma imagem para trabalhar e criamos uma mascara para borramento da imagem, com isso criado vamos ter duas imagens uma onde vemos em uma o borramento e em outra a imagem na de borramentos deixamos as bordas com maior ocorrência e o meio com menor (borda = 1 meio = 0) e nada imagem o contrário bordas com menor ocorrencia e meio com maior (bordas = 0, meio = 1) e logo após isso somamos os dois resultados e temos o filtro tilt shift. O código é apresentado abaixo</p>
 </div>
 <div id="app-listing" class="listingblock">
 <div class="title">tiltshift.cpp</div>
@@ -1281,6 +1316,27 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <span class="tok-p">}</span></code></pre>
 </div>
 </div>
+<div id="img-detalhamento" class="imageblock">
+<div class="content">
+<img src="detalhamento.png" alt="detalhamento">
+</div>
+<div class="title">Figure 8. Detalhamento</div>
+</div>
+<div class="paragraph">
+<p>A imagem acima nos mostra o que foi comentado sobre maiores e menores ocorrencias da imagem e do borramento, ja abaixo podemos ver a imagem original e o resultado do programa:</p>
+</div>
+<div id="img-cidade" class="imageblock">
+<div class="content">
+<img src="cidade.png" alt="cidade">
+</div>
+<div class="title">Figure 9. Cidade</div>
+</div>
+<div id="img-tiltshift" class="imageblock">
+<div class="content">
+<img src="tiltshift.png" alt="tiltshift">
+</div>
+<div class="title">Figure 10. TiltShift</div>
+</div>
 </div>
 </div>
 </div>
@@ -1288,7 +1344,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2016-09-18 17:14:34 BRT
+Last updated 2016-09-18 17:29:34 BRT
 </div>
 </div>
 </body>
