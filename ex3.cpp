@@ -74,7 +74,7 @@ int main(int argc, char** argv){
   }
 
   imshow("image", image);
-  imwrite("labeling.png", image);
+  imwrite("SoSolidos", image);
   printf("elementos sem bolhas: %d, com bolhas: %d\n", qtdTotal - qtdComBolhas, qtdComBolhas);
   waitKey();
   return 0;

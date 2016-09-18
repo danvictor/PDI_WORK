@@ -41,6 +41,7 @@ int main(int qtdArg, char** args) {
 
     namedWindow("janela", WINDOW_AUTOSIZE);
     imshow("janela", saida);
+    imwrite("troca.png", saida);
     waitKey();
     return 0;
 

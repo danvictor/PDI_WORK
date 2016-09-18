@@ -56,7 +56,7 @@ int main(int, char**){
 	  for(int i=pontos[0];i<pontos[2];i++){
 	    for(int j=pontos[3];j<pontos[1];j++){
 	      Cpixel = image.at<uchar>(i,j);
-	      image.at<uchar>(i,j)= 255 - Cpixell;
+	      image.at<uchar>(i,j)= 255 - Cpixel;
 	    }
 	  }
   } else {
@@ -68,6 +68,7 @@ int main(int, char**){
 	  }
   }
   imshow("janela", image);
+  imwrite("negativo.png", image);
   waitKey();
 
   return 0;
