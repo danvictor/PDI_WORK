@@ -14,9 +14,9 @@ int main(int, char**){
 
   int Cpixel;
 
-  image= imread("biel.png",CV_LOAD_IMAGE_GRAYSCALE);
+  image= imread("mario.png",CV_LOAD_IMAGE_GRAYSCALE);
   if(!image.data)
-    cout << "nao abriu biel.png" << endl;
+    cout << "falha ao abrir a imagem" << endl;
 
 //pega o tamanho da imagem, em pixels
   width=image.size().width;

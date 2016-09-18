@@ -8,7 +8,7 @@ using namespace std;
 int main(int qtdArg, char** args) {
     Mat image;
 
-    image= imread(args[1], CV_LOAD_IMAGE_COLOR);
+    image = imread("mario.png",CV_LOAD_IMAGE_GRAYSCALE);
     int width = image.size().width;
     int height = image.size().height;
 
