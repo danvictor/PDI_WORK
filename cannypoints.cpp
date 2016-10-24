@@ -1,7 +1,3 @@
-/**
- * Desenvolvido por José Victor Alves de Souza para a disciplina de Processamento Digital de Imagens
- * lecionada por Agostinho, DCA, UFRN.
- */
 #include <iostream>
 #include "opencv2/opencv.hpp"
 
