@@ -505,6 +505,11 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <li><a href="#_filtragem_no_domínio_espacial_ii">Filtragem no domínio espacial II</a></li>
 </ul>
 </li>
+<li><a href="#_unidade_1_2">Unidade 1</a>
+<ul class="sectlevel2">
+<li><a href="#_filtragem_no_domínio_da_frequência">Filtragem no domínio da frequência</a></li>
+</ul>
+</li>
 </ul>
 </div>
 </div>
@@ -1352,10 +1357,33 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </div>
 </div>
 </div>
+<div class="sect1">
+<h2 id="_unidade_1_2">Unidade 1</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="_filtragem_no_domínio_da_frequência">Filtragem no domínio da frequência</h3>
+<div class="sect3">
+<h4 id="_exercício_1_6">Exercício 1</h4>
+<div class="paragraph">
+<p>Neste Exercício foi sugerido pra que usassemos o programa do professor como base para implementação do algoritmo do filtro homomórfico, este filtro tem como objetivo melhorar (homogenizar) a iluminação do ambiente, que foi mal iluminada.</p>
+</div>
+<div class="paragraph">
+<p>Para fazer este código devemos ter algumas coisas em mente, a primeira delas é que vamos trabalhar no dominio da frequência, isso ocorrerá para que desta maneira venhamos aproveitar senoides de altas e baixas frequências. Segundo devemos saber que a má iluminação tem como resultado uma alteração de baixa de frequência, isso vai ocorrer, pois a variação de luminosidade é pequena por pixel, então ao filtrarmos essa imagem devemos deixar passar somente a alta frequência e filtrar a baixa frequência.</p>
+</div>
+<div class="stemblock">
+<div class="title">Delimited block</div>
+<div class="content">
+\[\[H(u,v) = (\gammaH - \gammaL) * (1 - exp((-c*D²(u,v))/(D0)²)) + \gammaL]\]
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2016-09-18 22:23:42 BRT
+Last updated 2016-10-24 15:52:34 BRT
 </div>
 </div>
 </body>
