@@ -1559,7 +1559,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <p>Para este código vemos algumas funções implementadas pelo onpenCV como a DFT, Padding e outras, o código consiste na realização da transformada de fourrier da matriz de pixel da imagens, depois realizamos a troca de regiões como foi efetuado na primeira unidade. Construimos a matriz do filtro utilizando a formula:</p>
 </div>
 <div class="paragraph">
-<p>\$ H(u,v) = \gamma H - \gamma L * 1 - exp((-c*D²(u,v))/(D0)²) + \gamma L \$</p>
+<p>\$ H(u,v) = \gamma H - \gamma L * (1 - exp((-c*D²(u,v))/D0^2)) + \gamma L \$</p>
 </div>
 <div class="paragraph">
 <p>Mutiplicamos H(u,v) pela matriz imagem e obtemos uma nova matriz, nessa nova matriz trocamos os quadrantes de novo e passamos a transformada inversa de fourrier. A imagem obtida será a imagem filtrada.</p>
@@ -1786,7 +1786,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2016-10-25 16:00:18 BRT
+Last updated 2016-10-25 16:02:21 BRT
 </div>
 </div>
 <script type="text/x-mathjax-config">
