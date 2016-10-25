@@ -1369,7 +1369,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <p>Neste Exercício foi sugerido pra que usassemos o programa do professor como base para implementação do algoritmo do filtro homomórfico, este filtro tem como objetivo melhorar (homogenizar) a iluminação do ambiente, que foi mal iluminada.</p>
 </div>
 <div class="paragraph">
-<p>Para fazer este código devemos ter algumas coisas em mente, a primeira delas é que vamos trabalhar no dominio da frequência, isso ocorrerá para que desta maneira venhamos aproveitar senoides de altas e baixas frequências. Segundo devemos saber que a má iluminação tem como resultado uma alteração de baixa de frequência, isso vai ocorrer, pois a variação de luminosidade é pequena por pixel, então ao filtrarmos essa imagem devemos deixar passar somente a alta frequência e filtrar a baixa frequência. Desta maneira vamos utilizar dos componentes da imagem (ruidos, reflectância &#8230;&#8203;) no dominio da frequência de tal modo que eles estarão se mutiplicando e nós precisamos deles sendo somados para que ocorra a filtragem de maneira correta, para isto aplicamos o logaritmo fazemos a filtragem eliminando as baixas frequências uma vez filtrado aplicamos o exponêncial e logo após a transformada reversa.</p>
+<p>Para fazer este código devemos ter algumas coisas em mente, a primeira delas é que vamos trabalhar no dominio da frequência, isso ocorrerá para que desta maneira venhamos aproveitar senoides de altas e baixas frequências. Segundo devemos saber que a má iluminação tem como resultado uma alteração de baixa de frequência, isso vai ocorrer, pois a variação de luminosidade é pequena por pixel, então ao filtrarmos essa imagem devemos deixar passar somente a alta frequência e filtrar a baixa frequência. Desta maneira vamos utilizar dos componentes da imagem (iluminância e reflectância &#8230;&#8203;) estes estarão se mutiplicando e nós precisamos deles sendo somados para que ocorra a filtragem de maneira correta, para isto aplicamos o logaritmo fazemos a transformada para entrarmos no dominio da frequancia, começamos a filtragem eliminando as baixas frequências uma vez filtrado aplicamos a transformada reversa e logo após aplicamos o exponêncial.</p>
 </div>
 <div class="paragraph">
 <p>Segue Código:</p>
@@ -1786,7 +1786,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2016-10-25 16:05:06 BRT
+Last updated 2016-10-25 18:33:42 BRT
 </div>
 </div>
 <script type="text/x-mathjax-config">
